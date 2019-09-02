@@ -1,1 +1,2 @@
-I made this file w hit hub.
+#!/bin/sh
+echo I made this file w hit hub.
