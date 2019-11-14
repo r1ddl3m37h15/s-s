@@ -1,0 +1,22 @@
+#!/bin/sh -v
+
+#
+# An example hook script that is called after a successful
+# commit is made.
+#
+# To enable this hook, rename this file to "post-receive".
+#
+# must run on remote:
+# git config receive.denycurrentbranch ignore
+#
+
+#echo --------------------------------------------------
+#env | sort 
+echo -------------------------------------------------- post-receive
+
+unset GIT_DIR
+pwd
+cd ..
+pwd
+exec git reset --hard
+echo -------------------------------------------------- post-receive ~~fin~~
